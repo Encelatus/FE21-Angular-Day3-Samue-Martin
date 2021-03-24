@@ -1,27 +1,27 @@
 export const products = [
     {
-        name: "Leash",
+        productName: "Leash",
         price: 30,
-        decription: "Premium Leash for your dog",
-        img: 
+        description: "Premium Leash for your dog",
+        img: "../../assets/img/dogLeash.jpeg" 
     },
     {
-        name: "Brush",
+        productName: "Brush",
         price: 20,
-        decription: "Premium Brush for your pet",
-        img: 
+        description: "",
+        img: "../../assets/img/dogBrush.jpg"
     },
     {
-        name: "Ball-toy",
+        productName: "Ball-toy",
         price: 10,
-        decription: "Premium toy for your pet to play with",
-        img: 
+        description: "Premium toy for your pet to play with",
+        img: "../../assets/img/dogBall.jpg"
     },
     {
-        name: "Dogfood",
+        productName: "Dogfood",
         price: 50,
-        decription: "Premium food for your pet.",
-        img: 
+        description: "Premium food for your pet.",
+        img: "../../assets/img/dogFood.jpg"
     },
 
 ];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from '../products';
 
 @Component({
   selector: 'app-product-lsit',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductLsitComponent implements OnInit {
 
-  constructor() { }
+  products=products;
+  constructor() { 
+
+    
+  }
 
   ngOnInit(): void {
   }

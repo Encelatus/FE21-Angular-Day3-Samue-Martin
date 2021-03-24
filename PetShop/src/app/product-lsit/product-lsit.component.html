@@ -1,1 +1,22 @@
-<p>product-lsit works!</p>
+<h2>Products</h2>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of products; index as productId" class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ product.img }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <!-- Unser if statement zeigt die description an, und wenn keine vorhanden ist (=leerer string), dann roter Text "No description available" -->
+                    <ng-template [ngIf]="product.description.length != 0" [ngIfElse]="none">
+                        <p class="card-text">Description: {{ product.description }}</p>
+                    </ng-template>
+                    <ng-template #none>
+                        <p style="color: red;">No description available.</p>
+                    </ng-template>
+                    <a routerLink="productDetail/{{productId}}" class="btn btn-primary">More Details</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
