@@ -9,12 +9,8 @@ import { products } from '../products';
 export class ProductLsitComponent implements OnInit {
 
   products=products;
-  constructor() { 
+  constructor() {}
 
-    
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

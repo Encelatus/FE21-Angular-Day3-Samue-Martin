@@ -1,0 +1,13 @@
+<h1 class="fs-3">Your Shopping Card:</h1>
+<div *ngFor="let item of items">
+    <p>{{item.productName}}</p>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+    <input formControlName="fullName" type="text" placeholder="Full name">
+    <input formControlName="emailAdress" type="email" placeholder="Email">
+    <input formControlName="telephone" type="number" placeholder="Telephone">
+
+    <button type="submit" class="btn btn-primary">Buy</button>
+</form>

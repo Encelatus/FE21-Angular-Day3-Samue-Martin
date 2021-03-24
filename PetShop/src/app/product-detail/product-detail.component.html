@@ -1,1 +1,13 @@
-<p>product-detail works!</p>
+<div style="width: 20em;">
+    <img src="{{ product.img }}" class="card-img-top" style="width: 100%; object-fit: cover;"alt="...">
+</div>
+<div class="card-body">
+    <h5 class="card-title">{{product.productName}}</h5>
+    <ng-template [ngIf]="product.description.length != 0" [ngIfElse]="none">
+        <p class="card-text">Description: {{ product.description }}</p>
+    </ng-template>
+    <ng-template #none>
+        <p style="color: red;">No description available.</p>
+    </ng-template>
+    <a (click)="addToCart(product)" class="btn btn-primary">Add to cart</a>
+</div>
